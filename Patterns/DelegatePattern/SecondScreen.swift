@@ -1,10 +1,14 @@
 import UIKit
 
+protocol SecondScreenDelegate: AnyObject {
+    func changeBGColor()
+}
+
 class SecondScreen: UIViewController {
     
     let style = ButtonStyle()
     
-    weak var delegate: ChangeBGColor?
+    weak var delegate: SecondScreenDelegate?
     
     @AutoLayoutUsage private var changeColorButton: UIButton = {
         var config = UIButton.Configuration.filled()

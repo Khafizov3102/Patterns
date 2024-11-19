@@ -18,6 +18,7 @@ class View: UIViewController {
         view.backgroundColor = .systemBackground
         setupUI()
         bindViewModel()
+        viewModel.loadData()
     }
 }
 

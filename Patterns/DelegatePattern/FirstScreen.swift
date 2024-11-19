@@ -1,9 +1,5 @@
 import UIKit
 
-protocol ChangeBGColor: AnyObject {
-    func changeBGColor()
-}
-
 class FirstScreen: UIViewController {
 
     let secondVc = SecondScreen()
@@ -57,7 +53,7 @@ private extension FirstScreen {
     }
 }
 
-extension FirstScreen: ChangeBGColor {
+extension FirstScreen: SecondScreenDelegate {
     func changeBGColor() {
         view.backgroundColor = .random()
     }

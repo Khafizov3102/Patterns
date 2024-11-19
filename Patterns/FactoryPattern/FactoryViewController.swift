@@ -13,7 +13,7 @@ class FactoryViewController: UIViewController {
     }
 
     private func setupUI() {
-        let button = buttonFactory.createButton(title: "Button", color: .systemPink, cornerRadius: ButtonStyle.buttonCornerRadius)
+        let button = buttonFactory.makeButton(title: "Button", color: .systemPink, cornerRadius: ButtonStyle.buttonCornerRadius)
         view.addSubview(button)
         
         button.translatesAutoresizingMaskIntoConstraints = false

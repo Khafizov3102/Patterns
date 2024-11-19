@@ -6,14 +6,12 @@ class ViewModel {
     
     var labelProperties: ((LabelProperties) -> Void)?
 
-    init() {
+    func loadData() {
         sendDataToView()
     }
-
+    
     private func sendDataToView() {
         let properties = LabelProperties(title: "Task 1", color: .systemPink, alphaComponent: 0.8)
-        DispatchQueue.main.async {
-            self.labelProperties?(properties)
-        }
+        self.labelProperties?(properties)
     }
 }
